@@ -2,6 +2,8 @@ package com.jorgecaceres.ipoo.repuestos.datos.producto;
 
 import java.awt.Image;
 
+import com.jorgecaceres.ipoo.datos.proveedor.Proveedor;
+
 public class Producto {
 
 
@@ -11,8 +13,9 @@ public class Producto {
 	private byte imagen;
 	private double precio;
 	private Modelo modelo;
+	private Proveedor proveedor;
 	
-	public Producto(Long id, String nombre, String descripcion, byte imagen, double precio, Modelo modelo) {
+	public Producto(Long id, String nombre, String descripcion, byte imagen, double precio, Modelo modelo, Proveedor proveedor) {
 		super();
 		this.id = id;
 		this.nombre = nombre;
@@ -20,6 +23,7 @@ public class Producto {
 		this.imagen = imagen;
 		this.precio = precio;
 		this.modelo = modelo;
+		this.proveedor = proveedor;
 	}
 	
 	
@@ -47,6 +51,10 @@ public class Producto {
 		return modelo;
 	}
 	
+	public Proveedor getProveedor(){
+		return proveedor;
+	}
+	
 	public void setId(Long id) {
 		this.id = id;
 	}
@@ -66,7 +74,9 @@ public class Producto {
 	public void setPrecio(double precio) {
 		this.precio = precio;
 	}
-	
+	public void setProveedor(Proveedor proveedor){
+		this.proveedor = proveedor;
+	}
 	
 
 
