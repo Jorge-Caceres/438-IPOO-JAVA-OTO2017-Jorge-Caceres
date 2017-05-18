@@ -13,11 +13,13 @@ public class DummyStorage implements Storage {
 	private List<Cliente> clientes;
 	
 	public DummyStorage(){
-		
+        //se establece una variable id de tipo long para usar como id, haciendolo aumentar su valor en 1 cada vez que se lo va utilizar		
 		long id = 0;
-		
-		clientes = new ArrayList<>();
-		
+        
+        // se inicializa el arraylist que contendrá a los clientes
+		clientes = new ArrayList<>();   
+        
+        //se inicializa un nuevo cliente con el constructor por defecto
 		Cliente c1 = new Cliente();
 		c1.setId(++id);
 		c1.setNombre("Jorge");
@@ -26,10 +28,9 @@ public class DummyStorage implements Storage {
 		c1.setTipoDoc("CI");
 		c1.setTelefono("021 962 343");
 		c1.setPassword("123");
-		
-		//se agrega la instancia de Cliente al vector
-		clientes.add(c1);
-		
+        //se agrega la instancia de Cliente al vector
+        clientes.add(c1);
+        
 		//se crea otro cliente de prueba
         Cliente c2 = new Cliente();
         c2.setId(++id);
@@ -40,20 +41,21 @@ public class DummyStorage implements Storage {
         
         //se agrega el cliente creado al ArrayList
         clientes.add(c2);
+        
 	}
 	
 	
 	@Override
 	public Cliente getCliente(String tipoDoc, String nroDoc, String password) {
-		
-		for (Cliente c: clientes){
-			
-			if(c.getTipoDoc().equals(tipoDoc) && c.getNroDoc().equals(nroDoc) && c.getPassword().equals(password)){
-				
-				return c;
-				
-			}
-		}
+       //se recorre la lista de clientes y se compara con los datos de los clientes inicializados
+         for (Cliente c: clientes){
+             //se comparan los campos con el método de la interface
+             if(c.getTipoDoc().equals(tipoDoc) && c.getNroDoc().equals(nroDoc) && c.getPassword().equals(password)){
+                //se retorna el cliente si es que los campos coinciden
+                return c;
+                
+              }
+          }
 		return null;
 	}
 	
