@@ -14,6 +14,7 @@ public class PracticaArrays {
       }
       
       public void testList(){
+    	  System.out.println("Elementos que posee la lista: "+listaDeEnteros.size());
     	  int valor =0;
     	  int valorMaximo = 10;
     	  
@@ -31,10 +32,12 @@ public class PracticaArrays {
     	  listaDeEnteros.remove(5);
     	  Integer i = listaDeEnteros.get(2);
     	  listaDeEnteros.remove(i);
-    	  
+    	  System.out.println("******************************");
     	  for(Integer lista: listaDeEnteros){
     		  System.out.println(lista);
     	  }
+    	  listaDeEnteros.clear();
+    	  System.out.println("Elementos que posee la lista: "+listaDeEnteros.size());
       }
       
       public static void main(String args[]){
