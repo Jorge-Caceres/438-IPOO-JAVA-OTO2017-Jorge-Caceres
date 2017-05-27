@@ -96,6 +96,19 @@ public class Asignaciones {
     	}
     	imp("_date", _date+"");
     	
+    	
+    	//Literal de enteros, el 1 en la asignación
+    	int a = 1;
+    	
+    	String s = "Este es un literal de string";
+    	
+    	boolean b = true;
+    	
+    	float f = 1.0f;
+    	
+    	double d = 2.0d;
+    	
+    	char c = 'A';
     }
     
     private void imp(String variable, String valor){
