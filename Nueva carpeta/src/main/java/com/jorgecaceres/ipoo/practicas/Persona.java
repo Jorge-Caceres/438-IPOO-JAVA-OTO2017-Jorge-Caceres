@@ -1,5 +1,7 @@
 package com.jorgecaceres.ipoo.practicas;
 
+import java.util.Date;
+
 public class Persona {
       private String nroDoc;
       private String nombre;
