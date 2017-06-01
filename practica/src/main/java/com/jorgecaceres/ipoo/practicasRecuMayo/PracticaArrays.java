@@ -10,7 +10,7 @@ public class PracticaArrays {
       
       public PracticaArrays(){
         arrayDeEnteros= new int[10];
-        listaDeEnteros = new ArrayList<>();
+        listaDeEnteros = new ArrayList<Integer>();
       }
       
       public void testList(){
@@ -44,6 +44,7 @@ public class PracticaArrays {
     	  PracticaArrays pa = new PracticaArrays();
     	  pa.test();
     	  pa.testList();
+    	  
       }
       
       private void test() {
