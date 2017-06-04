@@ -37,20 +37,17 @@ public class Archivo {
 		try{
 			entrada = new FileReader(origen);
 			salida = new FileWriter(destino);
-			int i=0;
+				int i=0;
 				while(i<listaPersona.size()){
 					String personaP = listaPersona.get(i).toString();
 					salida.write(personaP);
 					System.out.println(personaP);
 					i++;
 				}
-				
-				ObjectMapper mapper = new ObjectMapper();
-				mapper.writeValue(salida, Persona.class);
 
-			}catch (IOException ioe) {
+		}catch (IOException ioe) {
 				System.out.println(ioe.getMessage());
-			}finally{
+		}finally{
 				
 				try {
 					salida.close();
@@ -58,14 +55,16 @@ public class Archivo {
 				} catch (IOException e) {
 					e.printStackTrace();
 				}
-			}
+		}
 		
 	}
 	
 	public static void main(String[] args) {
 		Archivo a = new Archivo();
+		
 		String origen ="C:\\Users\\Jorge Caceres\\Documents\\entrada.txt";
 		String destino="C:\\Users\\Jorge Caceres\\Documents\\salida.txt";
+	
 		a.escribirArchivo(origen, destino);
 		
 
